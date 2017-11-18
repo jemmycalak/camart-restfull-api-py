@@ -1,6 +1,6 @@
 # DATABASE SETTINGS
 pg_db_username = 'postgres'
-pg_db_password = 'idg'
+pg_db_password = 'postgre'
 pg_db_name = 'camartdb'
 pg_db_hostname = 'localhost'
 
@@ -11,6 +11,8 @@ HOST = "0.0.0.0"
 SQLALCHEMY_ECHO = False
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 SECRET_KEY = "camart_jemmycalak"
+JWT_EXP_DELTA_SECOND = 1
+JWT_ALOGITMA = 'HS256'
 # PostgreSQL
 SQLALCHEMY_DATABASE_URI = "postgresql://{DB_USER}:{DB_PASS}@{DB_ADDR}/{DB_NAME}".format(DB_USER=pg_db_username,
                                                                                         DB_PASS=pg_db_password,

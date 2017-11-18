@@ -26,7 +26,8 @@ class bank(Resource):
                 'id'        : dt_bank['data'][i]['id'],
                 'nm_bank'   : dt_bank['data'][i]['attributes']['nm_bank'],
                 'norek'     : dt_bank['data'][i]['attributes']['norek'],
-                'img_bank'  : dt_bank['data'][i]['attributes']['img_bank']
+                'img_bank'  : dt_bank['data'][i]['attributes']['img_bank'],
+                'atasnama'  : dt_bank['data'][i]['attributes']['atasnama']
             })
         
         dt_bank['data'] = data

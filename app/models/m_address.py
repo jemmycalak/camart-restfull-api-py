@@ -20,7 +20,7 @@ class t_address(db.Model, CRUD):
     updateDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     rel_user    = db.relationship('t_user', backref=db.backref('t_address', lazy='dynamic'))
 
-    def __init__(self, id,nm_penerima, alamat, province, id_user):
+    def __init__(self, id,nm_penerima, alamat, province, notelp_penerima, id_user):
         self.id         = id
         self.nm_penerima= nm_penerima
         self.alamat     = alamat
