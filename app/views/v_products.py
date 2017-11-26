@@ -78,19 +78,19 @@ class cart(Resource):
         if len(sql) > 0:
             data_cart = s_cart().dump(sql, many=True).data
             #make a structure json
-            data=[]
-            for i in range(len(data_cart['data'])):
-                data.insert(i,{
-                    'id'            :data_cart['data'][i]['id'],
-                    'id_user'       :data_cart['data'][i]['attributes']['id_user'],
-                    'status_cart'   :data_cart['data'][i]['attributes']['cart_status'],
-                    'product_img'   :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_img'],
-                    'product_nm'    :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_nm'],
-                    'product_price' :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_price'],
-                    'product_color' :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_color']
-                })
+            # data=[]
+            # for i in range(len(data_cart['data'])):
+            #     data.insert(i,{
+            #         'id'            :data_cart['data'][i]['id'],
+            #         'id_user'       :data_cart['data'][i]['attributes']['id_user'],
+            #         'status_cart'   :data_cart['data'][i]['attributes']['cart_status'],
+            #         'product_img'   :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_img'],
+            #         'product_nm'    :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_nm'],
+            #         'product_price' :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_price'],
+            #         'product_color' :data_cart['data'][i]['attributes']['rel_product']['data']['attributes']['product_color']
+            #     })
 
-            data_cart = data
+            # data_cart = data
             resp= {'status':'true', 'data':data_cart}
         else:
             resp = {'status':'false', 'data':'empty cart'}, 200
