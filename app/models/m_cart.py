@@ -21,6 +21,7 @@ class t_cart(db.Model, CRUD):
     cart_status = db.Column(db.Boolean, default=False, nullable=True)
     createDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     updateDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
+    isDelete    = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     rel_user    = db.relationship("t_user", backref=db.backref("t_cart", lazy="dynamic"))     #harus ada ini untuk relasi dan ambil data dari table terelasi
     rel_product = db.relationship("t_product")
     

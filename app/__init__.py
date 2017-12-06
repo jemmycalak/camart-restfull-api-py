@@ -36,5 +36,8 @@ def create_app(config_filename):
     from app.views.v_bank import banks
     app.register_blueprint(banks, url_prefix='/api/v1/banks')
 
+    from app.views.v_uploadBuktiPembayaran import uploads
+    app.register_blueprint(uploads, url_prefix='/api/v1/uploadBuktiPembayaran')
+
     return app 
 

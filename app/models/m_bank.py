@@ -14,6 +14,7 @@ class t_bank(db.Model, CRUD):
     atasnama     = db.Column(db.String(100), nullable=False)
     createDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     updateDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
+    isDelete    = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
 
     def __init__(self, id, nm_bank, norek, img_bank, atasnama):
         self.id         = id

@@ -2,7 +2,7 @@ from pyfcm import FCMNotification
 
 def push_notification(token, msg):
     # api-key itu di dapat dari server key message clode
-    push_service = FCMNotification(api_key="AAAAKbHd_U0:APA91bGMrrCC59haFV0pzfTqe6m5G0RKuN82PL9FtjBKoFqbEdo38vzujWZKgasSkBYsF1dNQFjkHapi2sdggfN_nlBOVR25XR9mZ4YyWtvQVqdsPc_CXad2LXvTMvll2_wVnQ1LX-0J")
+    push_service = FCMNotification(api_key="AAAApd2iFkc:APA91bG42kA4o-uQpkveeZxQu6Y3527xd8sRrLTwgq6xvz7fqIeseig-yBsGi8UAXnzjDEmymQrJm2hDU7Nt7YP7VMjajBnZ4eW9lt0tCkYAiHX_n-3KZKB5dbPwsblWJonqPSrMtISn")
 
     token_firebase = token
     title = "CAMART"

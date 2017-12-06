@@ -18,6 +18,7 @@ class t_address(db.Model, CRUD):
     id_user     = db.Column(db.Integer, db.ForeignKey('t_user.id'))
     createDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     updateDate  = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
+    isDelete    = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     rel_user    = db.relationship('t_user', backref=db.backref('t_address', lazy='dynamic'))
 
     def __init__(self, id,nm_penerima, alamat, province, notelp_penerima, id_user):

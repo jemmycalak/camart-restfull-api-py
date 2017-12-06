@@ -13,6 +13,7 @@ from app.models.m_products import t_product, s_product, t_category, s_category
 from app.models.m_cart import t_cart, s_cart
 from app.models.m_order import t_order, s_order, increment_invoice, t_item_order
 from app.models.m_users import t_user, s_user
+from app.models.m_buktiPembayaran import t_buktiPembayaran, s_buktiPembayaran
 # import psycopg2
 # from config
 from types import *

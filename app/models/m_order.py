@@ -35,6 +35,7 @@ class t_order(db.Model, CRUD):
     id_address      = db.Column(db.Integer, db.ForeignKey('t_address.id'))
     createDate      = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     updateDate      = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
+    isDelete        = db.Column(db.TIMESTAMP, default=func.now(), nullable=True)
     rel_order_detail= db.relationship('t_item_order', backref=db.backref('t_order'))
     rel_user        = db.relationship('t_user', backref=db.backref('t_order', lazy='dynamic'))
     rel_bank        = db.relationship('t_bank', backref=db.backref('t_order', lazy='dynamic'))
